@@ -1,0 +1,30 @@
+﻿@model Skill
+
+@{
+    ViewData["Title"] = "AddSkill";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h1 class="text-white pb-5">AddSkill</h1>
+    <form method="post">
+        <div class="mb-3 text-white">
+            <label for="name" class="form-label">Skill Name</label>
+            <input asp-for="SkillName" type="text" class="form-control" id="name"  >
+            
+        </div>
+        <div class="mb-3 text-white">
+            <label for="desc" class="form-label">Skill Description</label>
+            <input asp-for="SkillDescription" type="text" class="form-control" id="desc">
+        </div>
+        <div class="mb-3 text-white">
+            <label for="val" class="form-label">Skill Value</label>
+            <input asp-for="SkillValue" type="number" class="form-control" id="val">
+        </div>
+       
+        <button type="submit" class="btn btn-primary">Add Skill</button>
+    </form>
+</div>
+
+
+

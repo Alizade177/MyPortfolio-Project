@@ -1,0 +1,59 @@
+﻿@model Project
+@{
+    ViewData["Title"] = "AddProjects";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <h1 class="text-white pb-5">AddProjects</h1>
+
+    <form method="post">
+        <div class="mb-3 text-white">
+            <label for="name" class="form-label">Project Name</label>
+            <input asp-for="ProjectName" type="text" class="form-control" id="name">
+
+        </div>
+        <div class="mb-3 text-white">
+            <label for="desc" class="form-label">Project Description</label>
+            <input asp-for="ProjectDescription" type="text" class="form-control" id="desc">
+        </div>
+
+        <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker  mb-3" inline="true">
+            <label class="text-white" $( ".datepicker" ).datepicker({
+                   format: 'yyyy-mm-dd'
+                   });>ProjectDate</label>
+            <input asp-for="ProjectDate" placeholder="Select date" type="date" id="date" class="form-control">
+            //<i class="fas fa-calendar input-prefix"></i>
+        </div>
+
+        <div class="mb-3 text-white">
+            <label for="purl" class="form-label">Project URL</label>
+            <input asp-for="ProjectURL" type="text" class="form-control" id="purl">
+        </div>
+
+        <div class="mb-3 text-white">
+            <label for="imgurl" class="form-label">Project Image URL</label>
+            <input asp-for="ProjectImageURL" type="text" class="form-control" id="imgurl">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Project</button>
+    </form>
+</div>
+
+
+@*
+asp-for="ProjectName"
+asp-for="ProjectDescription"
+asp-for="ProjectDate"
+asp-for="ProjectURL"
+asp-for="ProjectImageURL"
+
+
+
+<div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker  mb-3" inline="true">
+            <label class="text-white" for="date">ProjectDate</label>
+            <input placeholder="Select date" type="date" id="date" class="form-control" name="projectdate">
+            <i class="fas fa-calendar input-prefix"></i>
+        </div>
+*@
